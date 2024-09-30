@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'platform.html')
+    return render(request, 'home.html')
 
 
 def games(request):
