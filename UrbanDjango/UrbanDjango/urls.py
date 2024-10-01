@@ -18,12 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from task2.views import func_view, class_view
 from task4.views import *
+from task5.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('func_view/', func_view),
-    path('class_view/', class_view.as_view()),
-    path('', home_view, name='home'),
-    path('games/', games_view, name='games'),
-    path('cart/', cart_view, name='cart'),
+    # path('func_view/', func_view),
+    # path('class_view/', class_view.as_view()),
+    # path('', home_view, name='home'),
+    # path('games/', games_view, name='games'),
+    # path('cart/', cart_view, name='cart'),
+    path('register/django/', sign_up_by_django, name='sign_up_by_django'),
+    path('register/html/', sign_up_by_html, name='sign_up_by_html'),
 ]
